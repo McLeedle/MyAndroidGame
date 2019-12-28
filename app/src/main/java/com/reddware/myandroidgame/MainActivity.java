@@ -12,20 +12,14 @@ public class MainActivity extends AppCompatActivity {
         myGameView = new GameView(this);
         setContentView(myGameView);
     }
-
     @Override
     protected void onPause() {
         super.onPause();
-        // Pause the rendering thread
-        // Deallocate memory here if needed
         myGameView.onPause();
     }
-
     @Override
     protected void onResume() {
         super.onResume();
-        // Resume the paused rendering thread
-        // If anything was deallocated, reallocate them
         myGameView.onResume();
     }
 }
